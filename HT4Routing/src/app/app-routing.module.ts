@@ -10,9 +10,9 @@ import { AppComponent } from './components/app.component'
 import { NotFoundComponent } from './components/notfound/notfound.components'
 
 const routes: Routes = [
-  {
+  /*{
     path: "", component: AppComponent
-  },
+  },*/
   {
     path: "posts", component: PostsComponent
   },
