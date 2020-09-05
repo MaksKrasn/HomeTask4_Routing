@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { JsonPlaceholderService } from './services/jsonplaceholder.service'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [JsonPlaceholderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

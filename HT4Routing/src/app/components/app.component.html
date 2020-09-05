@@ -1,5 +1,5 @@
 <!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo" [containerInside]="false">
 
     <!-- Navbar brand -->
     <mdb-navbar-brand><a class="navbar-brand" href="#">JSON Placeholder</a></mdb-navbar-brand>
@@ -9,16 +9,24 @@
 
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="">Posts<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect>Features</a>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="albums">Albums</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="comments">Comments</a>
             </li>
-
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="todos">Todos</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="photos">Photos</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="users">Users</a>
+            </li>
         </ul>
         <!-- Links -->
 

@@ -14,7 +14,7 @@ const routes: Routes = [
     path: "", component: AppComponent
   },*/
   {
-    path: "posts", component: PostsComponent
+    path: "", component: PostsComponent
   },
   {
     path: "users", component: UsersComponent
