@@ -10,11 +10,12 @@ import { AppComponent } from './components/app.component'
 import { NotFoundComponent } from './components/notfound/notfound.components'
 
 const routes: Routes = [
-  /*{
-    path: "", component: AppComponent
-  },*/
   {
-    path: "", component: PostsComponent
+    path: "", component: PostsComponent, children: [
+      {
+        path: 'info/:userId', component: UsersComponent
+      }
+    ]
   },
   {
     path: "users", component: UsersComponent

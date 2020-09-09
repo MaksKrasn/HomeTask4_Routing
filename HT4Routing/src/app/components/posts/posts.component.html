@@ -1,16 +1,18 @@
-<h2>Posts</h2>
+<h2>{{title}}</h2>
 <table mdbTable>
-    <thead>
-      <tr>
-        <th *ngFor="let head of headElements" scope="col">{{head}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr mdbTableCol *ngFor="let el of elements">
-        <th scope="row">{{el.id}}</th>
-        <td>{{el.first}}</td>
-        <td>{{el.last}}</td>
-        <td>{{el.handle}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let el of posts">
+      <th scope="row">{{el.id}}</th>
+      <td>{{el.title}}</td>
+      <td>{{el.body}}</td>
+      <td>
+        <a [routerLink]="['info', el.userId]">User #{{el.userId}}</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -6,10 +6,12 @@ import { AppComponent } from './components/app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { JsonPlaceholderService } from './services/jsonplaceholder.service'
 import { HttpClientModule } from '@angular/common/http';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
