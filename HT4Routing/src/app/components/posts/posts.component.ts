@@ -10,10 +10,15 @@ import { from } from 'rxjs';
 export class PostsComponent implements OnInit{
   title = 'Posts';
   posts: Post[]
+  elements: any = [
+    {id: 1, first: 'Mark', last: 'Otto', handle: '@mdo'},
+    {id: 2, first: 'Jacob', last: 'Thornton', handle: '@fat'},
+    {id: 3, first: 'Larry', last: 'the Bird', handle: '@twitter'},
+  ];
 
-  constructor(public jsonplaceholderService: JsonPlaceholderService) {
-    
-  }
+  headElements = ['ID', 'First', 'Last', 'Handle'];
+
+  constructor(public jsonplaceholderService: JsonPlaceholderService) { }
 
   ngOnInit(): void {
     this.jsonplaceholderService.getPosts().subscribe(data => {
