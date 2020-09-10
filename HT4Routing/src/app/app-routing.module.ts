@@ -6,19 +6,23 @@ import { TodosComponent } from './components/todos/todos.component'
 import { AlbumsComponent } from './components/albums/albums.component'
 import { CommentsComponent } from './components/comments/comments.component'
 import { PhotosComponent } from './components/photos/photos.component'
-import { AppComponent } from './components/app.component'
 import { NotFoundComponent } from './components/notfound/notfound.components'
+import { UserInfoComponent } from './components/users/userinfo/user-info.component'
+import { AllUsersComponent } from './components/users/allusers/all-users.component';
 
 const routes: Routes = [
   {
-    path: "", component: PostsComponent, children: [
-      {
-        path: 'info/:userId', component: UsersComponent
-      }
-    ]
+    path: "", component: PostsComponent
   },
   {
-    path: "users", component: UsersComponent
+    path: "users", component: UsersComponent, children: [
+      {
+        path: 'userinfo/:userId', component: UserInfoComponent
+      },
+      {
+        path: 'allusers', component: AllUsersComponent
+      }
+    ]
   },
   {
     path: "todos", component: TodosComponent
