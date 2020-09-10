@@ -1,1 +1,22 @@
 <h2>{{title}}</h2>
+<table mdbTable>
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of users">
+        <th scope="row">
+            <a [routerLink]="['../userinfo', el.id]">User #{{el.id}}</a>
+        </th>
+        <td>{{el.name}}</td>
+        <td>{{el.username}}</td>
+        <td>{{el.email}}</td>
+        <td>{{el.address.city}}</td>
+        <td>{{el.phone}}</td>
+        <td>{{el.website}}</td>
+        <td>{{el.company.name}}</td>
+      </tr>
+    </tbody>
+</table>

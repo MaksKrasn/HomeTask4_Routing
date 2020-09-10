@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs'
 import { environment } from 'src/environments/environment'
 import { Post } from '../interfaces/post.interface'
+import { User } from '../interfaces/user.interface'
 
 @Injectable()
 export class JsonPlaceholderService {
@@ -10,5 +11,9 @@ export class JsonPlaceholderService {
 
     getPosts() : Observable<Post[]>{
         return this.httpClient.get<Post[]>(`${environment.apiUrl}/posts`);
+    }
+
+    getUsers() : Observable<User[]>{
+        return this.httpClient.get<User[]>(`${environment.apiUrl}/users`);
     }
 }
