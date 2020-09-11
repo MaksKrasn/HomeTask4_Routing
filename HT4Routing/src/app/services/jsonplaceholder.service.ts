@@ -16,4 +16,12 @@ export class JsonPlaceholderService {
     getUsers() : Observable<User[]>{
         return this.httpClient.get<User[]>(`${environment.apiUrl}/users`);
     }
+
+    /*getUserById(id: number): User {
+        let users: User[];
+        this.getUsers().subscribe(data => {
+            users = data;
+        })
+        return users.filter(us => us.id == id)[0];
+    }*/
 }
