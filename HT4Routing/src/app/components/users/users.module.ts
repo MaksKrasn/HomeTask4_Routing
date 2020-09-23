@@ -7,12 +7,13 @@ import { UsersComponent } from '../users/users.component';
 import { AllUsersComponent } from '../users/allusers/all-users.component'
 import { UserInfoComponent } from './userinfo/user-info.component';
 import { RouterModule } from '@angular/router';
+import { PhotosComponent } from '../photos/photos.component';
 
 @NgModule({
   declarations: [
     UsersComponent,
     UserInfoComponent,
-    AllUsersComponent
+    AllUsersComponent,
   ],
   imports: [
     BrowserModule,

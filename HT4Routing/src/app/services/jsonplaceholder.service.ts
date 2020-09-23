@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment'
 import { Post } from '../interfaces/post.interface'
 import { User } from '../interfaces/user.interface'
 import { Photo } from '../interfaces/photo.interface'
+import { Comment } from '../interfaces/comment.interface'
 
 @Injectable()
 export class JsonPlaceholderService {
@@ -20,5 +21,9 @@ export class JsonPlaceholderService {
 
     getPhotos() : Observable<Photo[]>{
         return this.httpClient.get<Photo[]>(`${environment.apiUrl}/photos`);
+    }
+
+    getComments() : Observable<Comment[]>{
+        return this.httpClient.get<Comment[]>(`${environment.apiUrl}/comments`);
     }
 }
