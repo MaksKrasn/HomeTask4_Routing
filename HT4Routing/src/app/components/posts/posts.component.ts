@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JsonPlaceholderService } from '../../services/jsonplaceholder.service'
 import { Post } from '../../interfaces/post.interface'
-import { from } from 'rxjs';
 
 @Component({
   selector: 'posts',
